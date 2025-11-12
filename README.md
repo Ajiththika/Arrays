@@ -9,9 +9,9 @@
 | 3 | **Jeru** | find(),findIndex(), filter(), toSorted(), toSpliced(), with(), every(), some(), sort(), reverse(), |
 | 4 | **Dishan** | values(), entries(), join(), keys(), copyWithin(), fill(), findLast(), findLastIndex(), flat(), |  
 
-## line allocation
+## sections
 
-**Ajie**     - 1-150
-**Kapi**     - 151-300
-**Jeru**     - 301-450
-**Dishan**   - 451-600
+**Jeru** - Starting, ADDING / REMOVING ITEMS & COPYING & MODIFYING
+**Kapi** - SEARCHING ELEMENTS & Check Conditions
+**Ajie** - Transforming Data, SORT & REVERSE, Extra
+**Dishan** - Convert and iterate
