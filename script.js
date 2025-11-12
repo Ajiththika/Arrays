@@ -31,6 +31,7 @@ console.log(["a", "b", "c", "d"].slice(1, 3));
 console.log(["cat", "dog", "bird"].toSpliced(1, 1)); // Non-destructive splice
 console.log([10, 20, 30].with(1, 99));             // Replace safely
 
+
 //        SEARCHING ELEMENTS
 let prices = [45, 80, 120];
 console.log(prices.find(p => p > 100));

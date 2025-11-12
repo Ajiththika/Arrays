@@ -1,4 +1,36 @@
 
+//          ARRAY BASICS
+let students = ["Ajie", "Renu", "Pooja", "Arul"];
+console.log(students[1]); // Access 2nd item
+
+console.log(Array.of(5, 10, 15)); // Create array
+console.log(Array.from("hello")); // String to array
+console.log(Array.isArray(students)); // Check if array
+
+//     ADDING / REMOVING ITEMS
+let fruits = ["apple", "banana"];
+fruits.push("grape");      // Add end
+fruits.pop();              // Remove end
+fruits.unshift("orange");  // Add start
+fruits.shift();            // Remove start
+
+let colors = ["red", "green", "blue"];
+colors.splice(1, 1, "yellow"); // Replace item
+
+console.log(fruits);
+console.log(colors);
+console.log(["pen", "pencil"].concat(["eraser", "sharpener"])); // Combine arrays
+
+//      COPYING & MODIFYING
+let data = [1, 2, 3, 4, 5];
+data.copyWithin(0, 3);
+console.log(data);
+
+console.log(new Array(5).fill("N/A")); // Fill array
+console.log(["a", "b", "c", "d"].slice(1, 3));
+
+console.log(["cat", "dog", "bird"].toSpliced(1, 1)); // Non-destructive splice
+console.log([10, 20, 30].with(1, 99));             // Replace safely
 
 
 
