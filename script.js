@@ -6,7 +6,7 @@ console.log(Array.of(5, 10, 15)); // Create array
 console.log(Array.from("hello")); // String to array
 console.log(Array.isArray(students)); // Check if array
 
-//     ADDING / REMOVING ITEMS
+    // ADDING / REMOVING ITEMS
 let fruits = ["apple", "banana"];
 fruits.push("grape");      // Add end
 console.log(fruits);
@@ -32,23 +32,31 @@ console.log(a);
 
 
 //      COPYING & MODIFYING
+
+// copyWithin() → copies part of an array to another location
 let data = [1, 2, 3, 4, 5];
-data.copyWithin(0, 3);
-console.log(data);
+data.copyWithin(0, 3); // copy from index 3 to start
+console.log(data); // [4, 5, 3, 4, 5]
 
+// fill() → fills array with static value
 let blank = new Array(4).fill("N/A");
-console.log(blank); // Fill array
+console.log(blank); // ["N/A", "N/A", "N/A", "N/A"]
 
+// slice() → extracts part of array (non-destructive)
 let letters = ["a", "b", "c", "d"];
 let part = letters.slice(1, 3);
-console.log(part);
+console.log(part); // ["b", "c"]
 
-let animals = ["cat", "dog", "bird"].toSpliced(1, 1);
-console.log(animals);
+// toSpliced() → creates new array with changes (non-destructive)
+let animals = ["cat", "dog", "bird"].toSpliced(1, 1); 
+console.log(animals); // ["cat", "bird"]
 
-let clone = [...nums];
+// spread (...) → clone and modify without changing original
+let num = [10, 20, 30];
+let clone = [...num];
 clone[1] = 99;
-console.log(clone);
+console.log(clone); 
+console.log(num);   
 
 
 //  Searching Elements
@@ -88,35 +96,47 @@ console.log(planets.at(-1)); // "star"
 
 //  Transforming Data
 
-// map() → multiply each number by 2
+//  map() → multiply each number by 2
 let numbers = [1, 2, 3];
 let doubled = numbers.map(num => num * 2);
-console.log(doubled); // [2, 4, 6]
+console.log(doubled); 
 
-// filter() → keep only numbers greater than 10
+//  filter() → keep only numbers greater than 10
 let scores = [5, 10, 15, 20];
 let highScores = scores.filter(score => score > 10);
-console.log(highScores); // [15, 20]
+console.log(highScores); 
 
-// reduce() → add all numbers together
-let total = [1, 2, 3, 4].reduce((sum, num) => sum + num);
-console.log(total); // 10
-
-// reduceRight() → joins words from right to left
-let words = ["a", "b", "c"];
-let joinRight = words.reduceRight((a, b) => a + b);
-console.log(joinRight); // "cba"
-
-// flat() → flatten nested arrays
+//  flat() → flatten nested arrays
 let nested = [1, [2, [3]]];
 let flat = nested.flat(2);
-console.log(flat); // [1, 2, 3]
+console.log(flat); 
 
-// flatMap() → double each number and flatten
+//  flatMap() → double each number and flatten
 let nums = [1, 2, 3];
 let flatMapExample = nums.flatMap(n => [n, n * 2]);
-console.log(flatMapExample); // [1, 2, 2, 4, 3, 6]
+console.log(flatMapExample); 
 
+// forEach() → Runs a function for each item in an array
+let fruits3 = ["apple", "banana", "mango"];
+fruits3.forEach(fruit => {
+  console.log("I love", fruit);
+});
+
+// WeakMap() →  Stores object keys safely (and auto-deletes them when not needed)
+let weak = new WeakMap();
+let person = { name: "Ajie" };
+weak.set(person, "Likes apples"); // Store some data linked to that object
+console.log(weak.get(person)); 
+person = null;
+
+//  reduce() → add all numbers together
+let total = [1, 2, 3, 4].reduce((sum, num) => sum + num);
+console.log(total); 
+
+//  reduceRight() → joins words from right to left
+let words = ["a", "b", "c"];
+let joinRight = words.reduceRight((a, b) => a + b);
+console.log(joinRight); 
 
 //  Checking Conditions
 
@@ -173,13 +193,22 @@ let arrEntries = [...["x", "y", "z"].entries()];
 console.log(arrEntries); 
 
 
-//  Extra 
-
-// forEach() → run code for each item
-let names = ["Tom", "Jerry", "Spike"];
-names.forEach(name => console.log("Hello", name));
-
+// Additional 
 // toString() → turns array into string
 let letters2 = ["a", "b", "c"];
 console.log(letters2.toString()); // "a,b,c"
+
+
+// let arr = []
+// arr[99] = 99;
+// console.log(arr[99]);
+
+// let flatMapped = nums.flatMap(n => {
+//   if (n > 10) {
+//     return [n, n];
+//   } else {
+//     return []; 
+//   }
+// });
+// console.log(flatMapped);
 
